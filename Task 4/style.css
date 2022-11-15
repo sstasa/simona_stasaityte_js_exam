@@ -27,3 +27,14 @@
   margin-top: 50px;
   color: #333;
 }
+
+#output {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 5px;
+
+}
+.card{
+  border: 1px solid gray;
+  padding: 10px;
+}
