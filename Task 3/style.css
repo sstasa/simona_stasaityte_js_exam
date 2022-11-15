@@ -3,8 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Mobile first */
@@ -62,15 +66,34 @@
 
 .outputGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1300px;
 }
 .card {
-  max-width: 200px;
   border: 1px solid gray;
   text-align: center;
+  max-width: 200px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgb(180, 190, 194);
+}
+.card h3 {
+  padding: 5px 0px;
+}
+@media screen and (min-width: 768px) {
+  .outputGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-img {
-  max-width: 100%;
+@media screen and (min-width: 1024px) {
+  .outputGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .outputGrid {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
