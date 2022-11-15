@@ -59,3 +59,18 @@
   border-radius: 5px;
   background-color: #fff;
 }
+
+.outputGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+.card {
+  max-width: 200px;
+  border: 1px solid gray;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
