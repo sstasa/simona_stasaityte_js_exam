@@ -32,14 +32,25 @@ mainInit();
 function displayCars(obj) {
   const cardEl = document.createElement("div");
   cardEl.classList = "card";
+  cardEl.id = `${obj.brand}`;
   const brandEl = document.createElement("h3");
   brandEl.textContent = obj.brand;
   const modelsArr = obj.models;
   cardEl.append(brandEl);
+  const ulEl = document.createElement("ul");
+  cardEl.append(ulEl);
+  if (obj.models.length > 16) {
+    const iconEl = document.createElement("i");
+    iconEl.classList = "fa fa-arrow-down dropdownIcon";
+    iconEl.ariaHidden = true;
+    cardEl.append(iconEl);
+  }
+
   modelsArr.forEach((model) => {
     const modelsEl = document.createElement("li");
+    modelsEl.style.listStyle = "none";
     modelsEl.textContent += model;
-    cardEl.append(modelsEl);
+    ulEl.append(modelsEl);
   });
   outputEl.append(cardEl);
 }

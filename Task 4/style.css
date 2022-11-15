@@ -3,8 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 /* Mobile first */
@@ -29,12 +29,62 @@
 }
 
 #output {
+  max-width: 1300px;
+  margin: 20px 10px;
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 5px;
-
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
-.card{
+.card {
   border: 1px solid gray;
   padding: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgb(180, 190, 194);
+  position: relative;
+}
+
+.card li {
+  color: #444;
+}
+.card ul {
+  max-height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.card ul::-webkit-scrollbar {
+  display: none;
+}
+
+.card h3 {
+  padding-bottom: 5px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.dropdownIcon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: #444;
+}
+
+@media screen and (min-width: 768px) {
+  #output {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #output {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #output {
+    grid-template-columns: repeat(7, 1fr);
+  }
 }
