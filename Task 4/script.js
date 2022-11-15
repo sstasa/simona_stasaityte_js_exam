@@ -39,12 +39,6 @@ function displayCars(obj) {
   cardEl.append(brandEl);
   const ulEl = document.createElement("ul");
   cardEl.append(ulEl);
-  if (obj.models.length > 16) {
-    const iconEl = document.createElement("i");
-    iconEl.classList = "fa fa-arrow-down dropdownIcon";
-    iconEl.ariaHidden = true;
-    cardEl.append(iconEl);
-  }
 
   modelsArr.forEach((model) => {
     const modelsEl = document.createElement("li");
